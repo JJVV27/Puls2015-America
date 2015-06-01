@@ -25,12 +25,13 @@
 
 .icon-pluma:before {
 	content: "\e908";
+	margin-right: 0.1em;
 }
 
 .icon-estrella:before {
 	content: "\e9d9";
 	color: #FFB700;
-	margin-right: 0.5em;
+	margin-right: 0.2em;
 	position: relative;
 	top: 0.1em;
 }
@@ -57,6 +58,14 @@ body
 	background: #EEE;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
+}
+aside
+{
+display: none;
+}
+aside video
+{
+
 }
 footer
 {
@@ -108,26 +117,45 @@ header #avatar
 	right: 0;
 	top: 0;
 }
+header #logo
+{
+border-right: 1px solid white;
+	margin-right: 0.5em;	
+}
  
 header #avatar img
 {
 	width: 52px;
 
 	border-radius: 50%;
+
 }
 
 
 header #logo img
 {
-	border-right: 1px solid white;
 	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 52px;
+	-webkit-transition: 1s ;
+	   -moz-transition: 1s ;
+	    -ms-transition: 1s ;
+	     -o-transition: 1s ;
+	        transition: 1s ;
+	
+}
+header #logo img:hover
+{
+	-webkit-transform: rotate(360deg);
+	   -moz-transform: rotate(360deg);
+	    -ms-transform: rotate(360deg);
+	     -o-transform: rotate(360deg);
+	        transform: rotate(360deg);
 }
 nav
 {
 	background: #80bca3;
-	padding:  0 0.5em;
+	padding:  0 5em 0 0.5em;
 	position: relative;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 
@@ -152,7 +180,7 @@ nav ul #publicar_nav a
 {
 	background: #22BCE0;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-	padding: 1em 1em;
+	padding: 1em 0.5em;
 	border-radius: 5px;
 	text-decoration: none;
 	font-style: oblique;
@@ -167,6 +195,7 @@ nav ul li
 
 display: inline-block;
 margin: 0 1em 0 0;
+
 
 }
 
@@ -282,8 +311,24 @@ nav ul li a
 #contenido .item{
 	width: 49%;
 	float: left;
-	margin-right: 1%;
+	
 	
 }
+#contenido .item:nth-child(odd){
+	margin-right: 2%;
 
+}
+
+}
+@media screen and (min-width: 1000px){
+
+aside {
+	display: block;
+	float: right;
+	margin:1em;
+	width: 20%;
+}
+aside video{
+	width: 100%;
+}
 }
